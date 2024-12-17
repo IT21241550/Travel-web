@@ -1,0 +1,152 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* About Us Page Styling */
+  .about-us-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 130px;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    color: #1d4d77;
+    margin-bottom: 10px;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    color: #000000;
+  }
+  
+  .about-image img {
+    width: 100vw; /* Viewport width: full screen width */
+    height: 100vh; /* Viewport height: full screen height */
+    object-fit: cover; /* Ensure the image covers the entire space without distortion */
+    position: fixed; /* Fix the image to cover the viewport */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Push the image to the background layer */
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure content takes full viewport height */
+    position: relative; /* Stack content above the image */
+    color: white; /* Adjust text color for visibility */
+    text-align: center; /* Center text alignment */
+    padding: 20px;
+  }
+  
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    color: #1d4d77;
+    margin-bottom: 15px;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  .about-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .about-text li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .about-footer {
+    background-color: #1d4d77;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+  
+  .about-footer p {
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-image img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .about-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-header p {
+      font-size: 1rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-text p, .about-text li {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-header p {
+      font-size: 0.9rem;
+    }
+  
+    .about-footer p {
+      font-size: 0.9rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.6rem;
+    }
+  
+    .about-text p {
+      font-size: 0.9rem;
+    }
+  }
+  

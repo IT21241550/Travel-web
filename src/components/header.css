@@ -1,0 +1,95 @@
+/* Fixed Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  background-color: transparent !important;
+  backdrop-filter: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  height: 100px; /* Explicitly set navbar height */
+}
+
+/* Add this to create space for the fixed navbar */
+main, .main-content {
+  margin-top: 180px; /* navbar height (100px) + padding (40px * 2) */
+  position: relative;
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 40px;
+}
+
+.nav-links li {
+  font-size: 2rem;
+}
+
+.nav-links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgb(5, 5, 5);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  position: relative;
+}
+
+/* Underline effect on hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgba(10, 10, 10, 0.5);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+.nav-links a.active {
+  font-weight: 700;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Change header background on scroll */
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility Focus State */
+.nav-links a:focus {
+  outline: 2px solid rgb(161, 159, 159);
+  outline-offset: 4px;
+}
